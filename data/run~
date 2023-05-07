@@ -1,0 +1,17 @@
+#!/bin/bash
+cd wo_or
+bash run
+cd ..
+cd w_or
+bash run 
+cd ..
+cd flow_char
+bash run
+cd ..
+cd dnbr
+bash run
+cd ..
+cd temp
+bash run
+cd ..
+

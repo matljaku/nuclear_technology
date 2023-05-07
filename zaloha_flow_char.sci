@@ -1,0 +1,123 @@
+
+// Will calculate the flow characteristics of the core
+//Define the x-axis vector
+//Write into G_grid file
+G_grid = linspace(0.01,1.5,30)
+G_grid = G_grid * Coolant_flow
+fid = mopen("./data/flow_char/G_grid.txt", "w");
+for i=1:length(G_grid)
+	print(fid, G_grid(i));
+    	disp(G_grid(i));
+end
+mclose(fid);
+
+// Set thermal power to 100%
+// Iterate through G_grid
+Thermal_core_power = 1.0*160*MW;
+disp(Thermal_core_power)
+Averaged_heat_flux = Thermal_core_power/Number_of_assemblies ...
+                   / (Active_core_height*Assembly_heated_perimeter);
+                  
+q2p_av = Averaged_heat_flux;
+iin = CHAN_fluidProperty(1,'h_pT',Pref,Inlet_temperature_K); // inlet enthalpy
+fid = mopen("./data/flow_char/P_100.txt", "w");
+for i=1:length(G_grid)
+	W   = 0.95*G_grid(i)/Number_of_assemblies;
+	chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+	chAv = CHAN_solver(chAv);
+    	print(fid,chAv.Dpz($));
+    	//disp(G_grid(i), chAv.Dpz($));
+    	
+end
+mclose(fid);
+
+for i=1:length(chAv.q2p)
+	disp(chAv.q2p(i))
+	
+
+end
+// Set thermal power to 150%
+// Iterate through G_grid
+Thermal_core_power = 1.5*160*MW;
+Averaged_heat_flux = Thermal_core_power/Number_of_assemblies ...
+                   / (Active_core_height*Assembly_heated_perimeter);
+q2p_av = Averaged_heat_flux;
+disp(q2p_av)
+iin = CHAN_fluidProperty(1,'h_pT',Pref,Inlet_temperature_K); // inlet enthalpy
+
+chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+
+fid = mopen("./data/flow_char/P_150.txt", "w");
+for i=1:length(G_grid)
+	W   = 0.95*G_grid(i)/Number_of_assemblies;
+	chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+	chAv = CHAN_solver(chAv);
+    	print(fid,chAv.Dpz($));
+    	//disp(G_grid(i), chAv.Dpz(-1));
+end
+mclose(fid);
+
+
+// Set thermal power to 50%
+// Iterate through G_grid
+Thermal_core_power = 0.5*160*MW;
+Averaged_heat_flux = Thermal_core_power/Number_of_assemblies ...
+                   / (Active_core_height*Assembly_heated_perimeter);
+q2p_av = Averaged_heat_flux;
+iin = CHAN_fluidProperty(1,'h_pT',Pref,Inlet_temperature_K); // inlet enthalpy
+
+chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+
+fid = mopen("./data/flow_char/P_050.txt", "w");
+for i=1:length(G_grid)
+	W   = 0.95*G_grid(i)/Number_of_assemblies;
+	chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+	chAv = CHAN_solver(chAv);
+    	print(fid,chAv.Dpz($));
+    	//disp(G_grid(i), chAv.Dpz($));
+end
+mclose(fid);
+
+
+// Set thermal power to 0%
+// Iterate through G_grid
+Thermal_core_power = 0.0*160*MW;
+Averaged_heat_flux = Thermal_core_power/Number_of_assemblies ...
+                   / (Active_core_height*Assembly_heated_perimeter);
+q2p_av = Averaged_heat_flux;
+iin = CHAN_fluidProperty(1,'h_pT',Pref,Inlet_temperature_K); // inlet enthalpy
+
+chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+fid = mopen("./data/flow_char/P_000.txt", "w");
+for i=1:length(G_grid)
+	W   = 0.95*G_grid(i)/Number_of_assemblies;
+	chAv = CHAN_setOperatingConditions(chAv,Pref,iin,W,q2p_av,power_shape,grav);
+	chAv = CHAN_solver(chAv);
+    	print(fid,chAv.Dpz($));
+    	disp(G_grid(i), chAv.Dpz($));
+end
+mclose(fid);
+
+
+
+
+
+// Create now a "hot channel" with peaking factor 1.4
+//
+//chHot = chAv;    // Copy from the average channel
+//
+// Set higher power, keeping all other parameters the same
+//
+//chHot.q2p = chAv.q2p * 1.4;
+//
+// Solve the channel
+//
+//chHot = CHAN_solver(chHot);
+//scf(3);clf
+//subplot(2,2,1);plot(chHot.z,chHot.Dpz); title("Pressure as f(z): hot channel");
+//subplot(2,2,2);plot(chHot.z,chHot.iz); title("Specific enthalpy as f(z)");
+//subplot(2,2,3);plot(chHot.z,chHot.xe); title("Equilibrium quality as f(z)");
+//subplot(2,2,4);plot(chHot.z,chHot.vf); title("Void as f(z): hot channel");
+//halt("Press Enter to continue:");
+
+

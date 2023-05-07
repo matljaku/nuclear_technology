@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scilablib name="CHANlib">
+  <macro name="CHAN_CPRsolver" file="CHAN_CPRsolver.bin" md5="3cd6c18f2b6cc07718be43e6bc69cb1d"/>
+  <macro name="CHAN_accelerationPressureChange" file="CHAN_accelerationPressureChange.bin" md5="305ef56cccefdde8ede4951f2d044468"/>
+  <macro name="CHAN_createGeometry" file="CHAN_createGeometry.bin" md5="aa7d4f12085625b22f25dc3015cdb8cd"/>
+  <macro name="CHAN_createNewChannel" file="CHAN_createNewChannel.bin" md5="e08e1079034d644fbf527a8481be19a3"/>
+  <macro name="CHAN_enthalpy" file="CHAN_enthalpy.bin" md5="bdf47574196ac22a819eca6d7b2198a4"/>
+  <macro name="CHAN_equilibriumQuality" file="CHAN_equilibriumQuality.bin" md5="e94e640c57243b9955374721effeade2"/>
+  <macro name="CHAN_flowDerivative" file="CHAN_flowDerivative.bin" md5="d4cd9983ca4c7ed346fb0dbf3a59c16c"/>
+  <macro name="CHAN_fluidProperty" file="CHAN_fluidProperty.bin" md5="e3f1ac867fd78732019a6a6ccc7b9733"/>
+  <macro name="CHAN_frictionFactor" file="CHAN_frictionFactor.bin" md5="2fd582b331d35a08f1556df217bc4f1d"/>
+  <macro name="CHAN_frictionPressureLoss" file="CHAN_frictionPressureLoss.bin" md5="e9341c93f21da2c38140dcc4d2854820"/>
+  <macro name="CHAN_gravityPressureChange" file="CHAN_gravityPressureChange.bin" md5="ddf7e9e8e66c1715dd59a44936285f20"/>
+  <macro name="CHAN_localPressureLoss" file="CHAN_localPressureLoss.bin" md5="07abc875abbab012a8657a3f531aff13"/>
+  <macro name="CHAN_parallelCoupling" file="CHAN_parallelCoupling.bin" md5="fd5b7847b922718f0cdfb8e483435b01"/>
+  <macro name="CHAN_pressure" file="CHAN_pressure.bin" md5="1e8fcacb2c762f54ccc77fc2b09b676a"/>
+  <macro name="CHAN_setInletLoss" file="CHAN_setInletLoss.bin" md5="c4ee94961c3ca49091b9dab97d438ef4"/>
+  <macro name="CHAN_setModelOptions" file="CHAN_setModelOptions.bin" md5="b6efdd7ddf2cdfc3a752eff55b2de485"/>
+  <macro name="CHAN_setOperatingConditions" file="CHAN_setOperatingConditions.bin" md5="eccd9c4813adbd72070200388c25abf9"/>
+  <macro name="CHAN_solver" file="CHAN_solver.bin" md5="7f26e6ed080fce28a7f9a1019b0e3eab"/>
+  <macro name="CHAN_twophaseMultiplier" file="CHAN_twophaseMultiplier.bin" md5="0dc9391e7622adeffe7967d34b958120"/>
+  <macro name="CHAN_voidFraction" file="CHAN_voidFraction.bin" md5="bff95f8bb5fbf1a259ec434a06374a3e"/>
+  <macro name="Cf_Blasius" file="Cf_Blasius.bin" md5="09c62ddf4a7d6df4a9da631a881e1871"/>
+  <macro name="Cf_Haaland" file="Cf_Haaland.bin" md5="d75cf28984db062c6a3d95ee8de79510"/>
+  <macro name="DO_GECise2" file="DO_GECise2.bin" md5="689af1c6f3c09463e4f46ffcf8c34201"/>
+  <macro name="VOID_DriftFlux2" file="VOID_DriftFlux2.bin" md5="7fb2fef5e15f92d49c97eff44715130a"/>
+  <macro name="VOID_DriftFluxAnnular2" file="VOID_DriftFluxAnnular2.bin" md5="9655161ea10dd2052b1a6a17eefd2ec5"/>
+  <macro name="VOID_DriftFluxBubbly2" file="VOID_DriftFluxBubbly2.bin" md5="f2951dde852ac39b0a5f260b97a5b469"/>
+  <macro name="VOID_DriftFluxMist2" file="VOID_DriftFluxMist2.bin" md5="4db1a0e1da591bf9017f548d7ca81554"/>
+  <macro name="VOID_DriftFluxSaturated2" file="VOID_DriftFluxSaturated2.bin" md5="a769ac341fd14d80233f10dd2eac08f4"/>
+  <macro name="VOID_DriftFluxSlug2" file="VOID_DriftFluxSlug2.bin" md5="7e0c4f5a208e16303849564c8d503cf9"/>
+  <macro name="VOID_DriftFluxSubcooled2" file="VOID_DriftFluxSubcooled2.bin" md5="4e10d7eced81bd699959bc7ea4e09d9a"/>
+  <macro name="VOID_HEM2" file="VOID_HEM2.bin" md5="3dbd3e675b8dc4cf028eba2c0c0fd63e"/>
+  <macro name="XSteam" file="XSteam.bin" md5="c855e088fad583b8f84cee028b6e51cd"/>
+</scilablib>

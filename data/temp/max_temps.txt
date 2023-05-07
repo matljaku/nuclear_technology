@@ -1,0 +1,20 @@
+
+
+z_clad	t_max_cout 
+2	622.03353	(DB)
+2	622.74330	(Weisman)
+2	612.24440	(Osmachkin)
+2	629.20697	(Markoczy)
+
+
+z_fuel		t_max_fcen 	
+1.3535354	1108.7003 	(DB)
+1.3535354	1110.278 	(Weisman)
+1.3535354	1082.5468 	(Osmachkin)
+1.3333333	1129.6454	(Markoczy)
+
+
+
+
+
+   

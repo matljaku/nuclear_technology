@@ -1,0 +1,4 @@
+#!/bin/bash
+paste G_grid.txt P_100.txt P_150.txt P_050.txt P_000.txt > data.txt
+grep "\S" data.txt > data_2.txt
+gnuplot script.gnu

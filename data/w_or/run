@@ -1,0 +1,7 @@
+#!/bin/bash
+paste dz.txt diz.txt dpz.txt dit.txt > data.txt
+grep "\S" data.txt > data_2.txt
+gnuplot script.gnu
+paste dz.txt Dpz_grav.txt Dpz_fric.txt Dpz_acc.txt  Dpz_loc.txt> data_3.txt
+grep "\S" data_3.txt > data_4.txt
+gnuplot script_2.gnu

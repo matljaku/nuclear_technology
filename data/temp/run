@@ -1,0 +1,36 @@
+#!/bin/bash
+paste dz.txt it.txt temp_cout.txt temp_cin.txt temp_fout.txt temp_fcen.txt dvf.txt > data.txt
+
+grep "\S" data.txt > data_2.txt
+
+gnuplot script.gnu
+gnuplot script_3.gnu
+
+
+
+
+paste dz.txt temp_cout.txt temp_cout_weis.txt temp_cout_osm.txt temp_cout_mar.txt  > data_cout.txt
+paste dz.txt temp_cin.txt temp_cin_weis.txt temp_cin_osm.txt temp_cin_mar.txt  > data_cin.txt
+paste dz.txt temp_fout.txt temp_fout_weis.txt temp_fout_osm.txt temp_fout_mar.txt  > data_fout.txt
+paste dz.txt temp_fcen.txt temp_fcen_weis.txt temp_fcen_osm.txt temp_fcen_mar.txt  > data_fcen.txt
+paste dz.txt temp_cout.txt temp_cout_weis.txt temp_cout_osm.txt temp_cout_mar.txt  it.txt > data_bulk.txt
+
+grep "\S" data_cout.txt > data_cout_2.txt
+grep "\S" data_cin.txt > data_cin_2.txt
+grep "\S" data_fout.txt > data_fout_2.txt
+grep "\S" data_fcen.txt > data_fcen_2.txt
+grep "\S" data_bulk.txt > data_bulk_2.txt
+
+
+gnuplot script_2.gnu
+
+
+paste fuel_temp_dr.txt temp_fuel_db.txt temp_fuel_weis.txt temp_fuel_osm.txt temp_fuel_mar.txt  > data_fuel.txt
+
+grep "\S" data_fuel.txt > data_fuel_2.txt
+
+gnuplot script_4.gnu
+
+
+
+

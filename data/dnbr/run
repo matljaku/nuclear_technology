@@ -1,0 +1,8 @@
+#!/bin/bash
+paste dz.txt q2p.txt xe.txt q_cr.txt dnbr.txt > data.txt
+paste dz.txt dpz.txt diz.txt dit.txt dvf.txt > data_3.txt
+
+grep "\S" data.txt > data_2.txt
+grep "\S" data_3.txt > data_4.txt
+gnuplot script.gnu
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+paste z.txt q2p.txt xa.txt > data.txt
+grep "\S" data.txt > data_2.txt
+
